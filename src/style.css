@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary: #172554;
+  --foreground: #eff6ff;
+  --background: #fafafa;
+  --border: #d4d4d8;
+}
+body {
+  font-family: sans-serif;
+  background-color: var(--background);
+  color: black;
+  font-size: 1rem;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.input {
+  width: 330px;
+  padding: 1rem 3rem 1rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  background: var(--background);
+  text-align: start;
+}
+
+.button {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  border: 0;
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+}
+
+.button:hover {
+  filter: brightness(0.8);
+}
+
+.button:active {
+  filter: brightness(0.6);
+}
+
+dl {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.copy-button {
+  position: absolute;
+  top: 20%;
+  right: 1rem;
+  background: #172554;
+  border: 0;
+  border-radius: 0.2rem;
+  padding: 0.3rem;
+  font-size: 0;
+}
+
+button:hover {
+  filter: brightness(0.8);
+}
+
+button:active {
+  transform: scale(0.9);
+}
