@@ -1,7 +1,7 @@
 const inputKey = document.getElementById("input-key");
 const textKeyLength = document.getElementById("text-key-length");
 let key = "";
-inputKey.value = "ASBjQbHLenF+SmrhE5sC+6TRCQyyeDPz";
+
 function generateSecureKey(length = 32) {
   return new Promise((resolve, reject) => {
     const array = new Uint8Array(length);
@@ -24,3 +24,5 @@ async function main() {
 function copyKey() {
   navigator.clipboard.writeText(key);
 }
+
+document.addEventListener("DOMContentLoaded", main);
