@@ -16,7 +16,7 @@ export function HomePage() {
   const generateNewSecretKey = async () => {
     if (code) {
       setHistory((prev) => {
-        const newHistory = [code, ...prev].slice(0, 10)
+        const newHistory = [code, ...prev].slice(0, 6)
         return newHistory
       })
     }
@@ -32,7 +32,7 @@ export function HomePage() {
     generateNewSecretKey()
   }, []);
 
-  return <div className='grid grid-row-2 h-svh place-content-center gap-10 selection:bg-green-500 selection:text-black overflow-hidden'>
+  return <div className='grid grid-row-2 h-svh place-content-center gap-10 selection:bg-green-500 selection:text-black overflow-hidden p-6'>
     <ModeToggle />
     <Card className='z-50 mx-auto'>
       <CardHeader className='flex items-center gap-2'>
